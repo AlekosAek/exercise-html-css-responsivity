@@ -5,12 +5,13 @@
 }
 
 
+
 body {
   margin-bottom: 1vh;
   margin-top: 1vh;
   gap:1%;
   display: grid;
-  height: 100vh;
+  height: 98vh;
   grid-template-rows: 1fr 4fr 1fr;
   grid-template-areas: "header"
     "main"
