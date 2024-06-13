@@ -5,125 +5,241 @@
 }
 
 body {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  min-height: 100dvh;
   min-height: 100vh;
-
+  gap: 1rem;
 }
 
 header {
-  height: 20vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-self: center;
+  flex: 0.3;
 }
 
 .header {
-  height: 100px;
-  width: 100px;
-  background-color: rgba(56, 2, 56, 0.872);
-  border-radius: 50%
+  width: 8rem;
+  height: 8rem;
+  background-color: purple;
+  border-radius: 50%;
+  flex: 1;
 }
 
-main {
-  height: 70vh;
-  width: 100vw;
+.my_aside {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
+  gap: 1rem;
+
+}
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  gap: 1rem;
 }
 
-.aside {
-  background-color: purple;
-  width: 98vw;
-  height: 7vh;
-  margin: 1vh;
-  border-radius: 15px;
 
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem
 }
 
 .my_main {
   background-color: rosybrown;
-  height: 7vh;
-  margin: 1vh;
-  width: 98vw;
+  flex: 1;
+}
+
+.aside {
+  border-radius: 5rem;
+  background-color: rgb(99, 11, 88);
+  flex: 1;
+
 }
 
 .side {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  flex: 0.25;
+  gap: 1rem;
 }
 
 .side_bar {
-  background-color: crimson;
-  height: 7vh;
-  width: 32vw;
-  margin-bottom: 1vh;
+  background-color: rebeccapurple;
+  flex: 1;
 }
 
 footer {
-  height: 10vh;
+  flex: 0.7;
+  background-color: aquamarine;
 }
 
-.footer {
-  background-color: olive;
-  height: 10vh;
 
-}
 
-@media screen and (min-width: 480px) {
+@media (min-width: 600px) {
+
   header {
-    justify-content: start;
-    margin: 2%;
+    align-self: flex-start;
   }
 
   .my_aside {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1vh;
+    flex-direction: row;
+    flex:1
   }
-
-  .aside {
-    width: 26vw;
-  }
-
-  .all_main {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 2vw;
-    grid-template-areas: "main1 main2 "
-      "main3 main4 ";
-      justify-items: center;
-      height:50vh;
-      
-  }
-
-  .my_main {
-    width: 25vw;
-    height: 15vh;
-  }
-
-  .all_main>.my_main:nth-child(1) {
-    grid-area: main1;
-  }
-
-  .all_main>.my_main:nth-child(2) {
-    grid-area: main2;
-  }
-
-  .all_main>.my_main:nth-child(3) {
-    grid-area: main3;
-  }
-
-  .all_main>.my_main:nth-child(4) {
-    grid-area: main4;
-  }
-
-  .side {
+  
+  
+  main {
+    flex-direction: row;
+    flex: 3;
+    gap: 2rem;
+    margin: 4rem;
+}
+  .main-content{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-  }
+    flex: 2;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
+
+ 
+.side{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+
+
+
+
+
+
+  */
+  /* 
+  html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+header {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.header-box {
+    background-color: #4B2963;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 1rem;
+}
+
+.menu-box {
+    flex: 1;
+    background-color:  #B4488A;
+    border-radius: 5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 4rem;
+}
+
+footer {
+    background-color: #C1C89A;
+    flex: 1;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.side-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.5rem;
+}
+
+.main-box {
+    background-color: #F495A8;
+    height: 48%;
+}
+
+.side-box {
+    background-color: #EF5FAC;
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    body {
+        gap: 0.5rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        flex: 3;
+        gap: 0.5rem;
+    }
+
+    header {
+        justify-content: center;
+        flex: 2;
+    }
+
+    .header-box {
+        width: 6rem;
+        height: 6rem;
+        align-self: center;
+    }
+
+    main {
+        flex-direction: column;
+        flex: 5;
+        gap: 0.5rem;
+        margin: 0;
+    }
+
+    .main-content {
+        flex-wrap: nowrap;
+        flex: 4;
+    }
+
+    .side-content {
+        flex-direction: row;
+        flex: 1;
+    }
+
+    footer {
+        flex: 2;
+    }
+} */
